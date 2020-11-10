@@ -15,6 +15,11 @@ body, .card, .jumbotron {
     font-size: 125%;
 }
 
+#contactContent {
+    width: 50%;
+    margin: auto;
+}
+
 /* Leave for now */
 /* .card {
     border: 0cm;
