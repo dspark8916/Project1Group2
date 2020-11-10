@@ -1,3 +1,8 @@
 body {
     background-color: rgb(126, 209, 225);
 }
+
+.card {
+    background-color: rgb(126, 209, 225);
+    border: 0cm;
+}
