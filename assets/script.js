@@ -10,7 +10,7 @@ $(document).ready(function () {
             console.log(lon);
             searchWeather(lat, lon);
         });
-    }
+    };
 
 
 
