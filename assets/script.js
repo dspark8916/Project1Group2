@@ -1,31 +1,23 @@
 $(document).ready(function () {
-    geolocation.getCurrentPosition();
-    console.log("start")
 
-    function getLocation() {
-        console.log("getLocation")
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition)
-        }
-    };
+    if (navigator.geolocation) { // device can return its location
+        navigator.geolocation.getCurrentPosition(function (position) {
 
-    function showPosition(position) {
-        var lat = position.coord.lat;
-        var lon = position.coord.lon;
-        console.log(lat);
-        console.log(lon);
-    };
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
 
+            console.log(lat);
+            console.log(lon);
+        });
+    }
 
 
 
 
     $(".button").on("click", function () {
         console.log("show btn click")
-        getLocation();
 
         searchWeather(lat, lon);
-        console.log(lat, lon);
     });
 
     function searchWeather(lat, lon) {

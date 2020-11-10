@@ -1,12 +1,12 @@
-body {
-    background-color: rgb(126, 209, 225);
+body, .card, .jumbotron {
+    background-color: rgb(95, 241, 224);
 }
 
 .card {
-    background-color: rgb(126, 209, 225);
     border: 0cm;
 }
 
-.jumbotron {
-    background-color: rgb(126, 209, 225)
+#activityBtns {
+    width: fit-content;
+    height: 100px;
 }
