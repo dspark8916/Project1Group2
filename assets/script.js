@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     $("[type ='button']").on("click", function () {
         // $(this).attr() = activityType
-        activityType = recreational;
+        activityType = "diy";
         activityPick(activityType);
     });
 
