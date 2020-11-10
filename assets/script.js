@@ -1,8 +1,33 @@
 $(document).ready(function () {
 
+    function getLocation() {
+        // Make sure browser supports this feature
+        if (navigator.geolocation) {
+            // Provide our showPosition() function to getCurrentPosition
+            navigator.geolocation.getCurrentPosition();
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    // This will get called after getCurrentPosition()
+    function showPosition(position) {
+        // Grab coordinates from the given object
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        console.log("Your coordinates are Latitude: " + lat + " Longitude " + lon);
+    }
+
+
+
+
+
     $("button").on("click", function () {
-        var lat = window.location.lat;
-        var lon = window.location.lon;
+        getLocation()
+        var lat = position.coord.lat;
+        console.log(lat);
+        var lon = position.coord.lon;
+        console.log(lon);
 
         searchWeather(lat, lon);
         console.log(lat, lon);
