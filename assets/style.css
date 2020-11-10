@@ -5,3 +5,8 @@ body, .card, .jumbotron {
 .card {
     border: 0cm;
 }
+
+#activityBtns {
+    width: fit-content;
+    height: 100px;
+}
