@@ -3,10 +3,17 @@ body, .card, .jumbotron {
 }
 
 .card {
+    padding-top: 25px;
+    white-space: nowrap;
+}
+
+/* Leave for now */
+/* .card {
     border: 0cm;
 }
 
 #activityBtns {
     width: fit-content;
     height: 100px;
-}
+} */
+/* Leave for now */
