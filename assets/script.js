@@ -1,38 +1,23 @@
 $(document).ready(function () {
 
-    function getLocation() {
-        // Make sure browser supports this feature
-        if (navigator.geolocation) {
-            // Provide our showPosition() function to getCurrentPosition
-            navigator.geolocation.getCurrentPosition();
-        } else {
-            alert("Geolocation is not supported by this browser.");
-        }
-    }
+    if (navigator.geolocation) { // device can return its location
+        navigator.geolocation.getCurrentPosition(function (position) {
 
-    // This will get called after getCurrentPosition()
-    function showPosition(position) {
-        // Grab coordinates from the given object
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;
-        console.log("Your coordinates are Latitude: " + lat + " Longitude " + lon);
-    }
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+
+            console.log(lat);
+            console.log(lon);
+            searchWeather(lat, lon);
+        });
+    };
 
 
 
+    $(".button").on("click", function () {
+        console.log("show btn click")
 
-
-    $("button").on("click", function () {
-        getLocation()
-        var lat = position.coord.lat;
-        console.log(lat);
-        var lon = position.coord.lon;
-        console.log(lon);
-
-        searchWeather(lat, lon);
-        console.log(lat, lon);
-
-    })
+    });
 
     function searchWeather(lat, lon) {
         $.ajax({
@@ -56,12 +41,16 @@ $(document).ready(function () {
             card.append(cardBody);
             $("#today").append(card);
         });
-    }
+    };
 
 
 
 
 
+    // event that occurs when you click on CLICK HERE
+    // event that occurs when you click on DIY/RECREATIONAL/SOCIAL/
+    //          EDUCATIONAL/BUSYWORK/COOKING/RELAXATION/CHARITY/MUSIC
+    //
 
 
 
