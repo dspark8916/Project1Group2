@@ -8,16 +8,15 @@ $(document).ready(function () {
 
             console.log(lat);
             console.log(lon);
+            searchWeather(lat, lon);
         });
     }
-
 
 
 
     $(".button").on("click", function () {
         console.log("show btn click")
 
-        searchWeather(lat, lon);
     });
 
     function searchWeather(lat, lon) {
