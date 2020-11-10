@@ -6,3 +6,7 @@ body {
     background-color: rgb(126, 209, 225);
     border: 0cm;
 }
+
+.jumbotron {
+    background-color: rgb(126, 209, 225)
+}
