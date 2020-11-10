@@ -5,6 +5,14 @@ body, .card, .jumbotron {
 .card {
     padding-top: 25px;
     white-space: nowrap;
+    border: 3px solid #ff7a59;
+}
+
+.card:hover {
+    border: 3px dotted #ff7a59;
+    color: #ff7a59;
+    background: #fff;
+    font-size: 150%;
 }
 
 /* Leave for now */
