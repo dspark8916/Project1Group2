@@ -37,7 +37,7 @@ $(document).ready(function () {
 
             cardBody.append(title, temp, main);
             card.append(cardBody);
-            $(".lead").append(card);
+            $(".weatherWidget").append(card);
         });
     };
 
