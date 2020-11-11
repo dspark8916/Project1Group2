@@ -42,8 +42,7 @@ $(document).ready(function () {
     };
 
     $("[type ='button']").on("click", function () {
-        $(this).attr("id") = activityType;
-        // activityType = "diy";
+        activityType = $(this).attr("id");
         activityPick(activityType);
     });
 
@@ -56,6 +55,16 @@ $(document).ready(function () {
             dataType: "json",
         }).then(function (data) {
             console.log(data);
+
+            $(".modal-title").empty();
+            $(".modal-body").empty();
+
+            type = $("<h5>").text(data.type);
+            activity = $("<h3>").addClass("activity").text("Activity: " + data.activity);
+            participants = $("<p>").addClass("participants").text("Participants: " + data.participants);
+
+            $(".modal-title").append(type);
+            $(".modal-body").append(activity, participants);
         });
     }
 
