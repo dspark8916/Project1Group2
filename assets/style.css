@@ -15,10 +15,18 @@ body, .card, .jumbotron {
     font-size: 125%;
 }
 
-#contactContent {
-    width: 50%;
-    margin: auto;
+#contentForm {
+    background-color: rgb(69, 176, 163);
+    margin-top: 20px;
+    padding: 5px;
+    position: relative;
+    width: 60%;
+    height: 60%;
+    text-align: center;
+    display: center;
+    text-decoration: rgb(24, 58, 54);
 }
+
 
 .modal-title {
     text-transform: uppercase;
