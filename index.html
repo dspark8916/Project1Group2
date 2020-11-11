@@ -20,7 +20,7 @@
     <a class="navbar-brand" href="index.html"> <img src="assets/images/chili_logo.png" class="d-inline-block align-top"
         alt="logo"> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -56,11 +56,12 @@
       <h1 class="display-4">Spice It Up !! </h1>
       <p class="lead">Looking for something to do? Can't quite figure it out? Come and check out our app and we'll make
         it happen for you!! We'll give you ideas and suggestions on what you can do to spice up your day!!</p>
-      <button type="button" class="btn btn-secondary" style="background-color: rgb(69, 176, 163);"><a href="contact.html">CLICK HERE</a></button>
+      <button type="button" class="btn btn-secondary" style="background-color: rgb(69, 176, 163);"><a
+          href="contact.html">CLICK HERE</a></button>
     </div>
   </div>
 
-  
+
   <!-- Buttons List Start -->
   <!-- <div class="card w-50 text-center mx-auto">
     <div class="card-body">
@@ -89,22 +90,48 @@
   </div> -->
   <!-- Buttons List End -->
 
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary">Spice It Up!</button>
+          <button type="button" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-danger">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Card Deck Start -->
   <div class="container-fluid">
     <div class="row card-deck flex-row flex-nowrap mx-auto">
-      <div class="card border-primary bg-transparent text-primary text-center mx-auto" id="diy" type="button">
+      <div class="card border-primary bg-transparent text-primary text-center mx-auto" id="diy" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-pencil-ruler fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Do It Yourself</h5>
         </div>
       </div>
-      <div class="card border-secondary bg-transparent text-secondary text-center mx-auto" id="relax" type="button">
+      <div class="card border-secondary bg-transparent text-secondary text-center mx-auto" id="relaxation" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-umbrella-beach fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Relaxation</h5>
         </div>
       </div>
-      <div class="card border-success bg-transparent text-success text-center mx-auto" id="social" type="button">
+      <div class="card border-success bg-transparent text-success text-center mx-auto" id="social" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-users fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Social</h5>
@@ -115,19 +142,22 @@
     <br>
 
     <div class="row card-deck flex-row flex-nowrap mx-auto">
-      <div class="card border-danger bg-transparent text-danger text-center mx-auto" id="educate" type="button">
+      <div class="card border-danger bg-transparent text-danger text-center mx-auto" id="education" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-book-reader fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Educational</h5>
         </div>
       </div>
-      <div class="card border-warning bg-transparent text-warning text-center mx-auto" id="busy" type="button">
+      <div class="card border-warning bg-transparent text-warning text-center mx-auto" id="busywork" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-hourglass-half fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Busywork</h5>
         </div>
       </div>
-      <div class="card border-info bg-transparent text-info text-center mx-auto" id="cook" type="button">
+      <div class="card border-info bg-transparent text-info text-center mx-auto" id="cooking" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-hamburger fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Cooking</h5>
@@ -137,19 +167,22 @@
     <br>
     <br>
     <div class="row card-deck flex-row flex-nowrap mx-auto">
-      <div class="card border-success bg-transparent text-success text-center mx-auto" id="rec" type="button">
+      <div class="card border-success bg-transparent text-success text-center mx-auto" id="recreational" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-running fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Recreational</h5>
         </div>
       </div>
-      <div class="card border-primary bg-transparent text-primary text-center mx-auto" id="gift" type="button">
+      <div class="card border-primary bg-transparent text-primary text-center mx-auto" id="charity" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-gift fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Charity</h5>
         </div>
       </div>
-      <div class="card border-dark bg-transparent text-dark text-center mx-auto" id="music" type="button">
+      <div class="card border-dark bg-transparent text-dark text-center mx-auto" id="music" type="button"
+        data-toggle="modal" data-target="#staticBackdrop">
         <i class="fas fa-headphones-alt fa-5x mx-auto"></i>
         <div class="card-body">
           <h5 class="card-title">Music</h5>
