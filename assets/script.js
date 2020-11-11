@@ -27,12 +27,12 @@ $(document).ready(function () {
             $("#today").empty()
 
             // creating a card for appending weather data
-            var title = $("<h3>").addClass("card-title").text(data.name);
-            var card = $("<div>").addClass("card");
+            var title = $("<h4>").addClass("card-title, weatherCity").text(data.name);
+            var card = $("<div>").addClass("card, weatherCard");
             // var wind = $("<p>").addClass("card-text").text("Wind Speed: " + (data.wind.speed).toFixed(1) + " MPH");
             // var humidity = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
-            var main = $("<div>").addClass("card-text").text(data.weather[0].main);
-            var temp = $("<p>").addClass("card-text").text("Temperature: " + (data.main.temp).toFixed(1) + " \u00B0F");
+            var main = $("<h6>").addClass("card-text, forecast").text(data.weather[0].main);
+            var temp = $("<h5>").addClass("card-text, cityTemp").text((data.main.temp).toFixed(1) + " \u00B0F");
             var cardBody = $("<div>").addClass("card-body");
 
             cardBody.append(title, temp, main);
