@@ -27,6 +27,9 @@ body, .card, .jumbotron {
     text-decoration: rgb(24, 58, 54);
 }
 
+#aboutUs { 
+    text-align: center;
+}
 
 .modal-title {
     text-transform: uppercase;
