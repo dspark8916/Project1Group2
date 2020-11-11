@@ -29,20 +29,21 @@ $(document).ready(function () {
             // creating a card for appending weather data
             var title = $("<h3>").addClass("card-title").text(data.name);
             var card = $("<div>").addClass("card");
-            var wind = $("<p>").addClass("card-text").text("Wind Speed: " + (data.wind.speed).toFixed(1) + " MPH");
-            var humidity = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
+            // var wind = $("<p>").addClass("card-text").text("Wind Speed: " + (data.wind.speed).toFixed(1) + " MPH");
+            // var humidity = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
+            var main = $("<div>").addClass("card-text").text(data.weather[0].main);
             var temp = $("<p>").addClass("card-text").text("Temperature: " + (data.main.temp).toFixed(1) + " \u00B0F");
             var cardBody = $("<div>").addClass("card-body");
 
-            cardBody.append(title, wind, humidity, temp);
+            cardBody.append(title, temp, main);
             card.append(cardBody);
-            $("#today").append(card);
+            $(".lead").append(card);
         });
     };
 
     $("[type ='button']").on("click", function () {
-        // $(this).attr() = activityType
-        activityType = "diy";
+        $(this).attr("id") = activityType;
+        // activityType = "diy";
         activityPick(activityType);
     });
 
