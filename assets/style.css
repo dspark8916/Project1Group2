@@ -20,6 +20,9 @@ body, .card, .jumbotron {
     margin: auto;
 }
 
+.modal-title {
+    text-transform: uppercase;
+}
 /* Leave for now */
 /* .card {
     border: 0cm;
