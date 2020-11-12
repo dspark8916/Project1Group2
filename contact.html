@@ -47,7 +47,8 @@
   </nav>
   <!-- nav end -->
 
-  <section class="container-fluid" id="contentForm">
+  <!-- old contact section -->
+  <!-- <section class="container-fluid" id="contentForm">
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Me</h2>
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions or comments? Please do not hesitate to contact us directly.</p>
     <div class="row justify-content-lg-center">
@@ -90,7 +91,40 @@
             <div class="status"></div>
         </div>
     </div>
-  </section>
+  </section> -->
+
+  <form id="contact">
+    <input type="text" placeholder="Enter your first name" id="firstName" />
+    <input type="email" placeholder="Enter your email" id="email" />
+    <!-- <input type="checkbox" id="newsletter" />Send me monthly newsletter -->
+<br><br>
+    <span>What is your question?</span>
+<br>
+    <textarea id="question" rows="4"></textarea>
+<br><br>
+<button id="sendContact" type="submit">
+    Send contact
+</button>
+</form>
+
+<script>
+var firstName;
+var email;
+var question;
+var contactForm = document.getElementById("contact");
+
+contactForm.addEventListener("click", function(event){
+    event.preventDefault();
+    if(event.target.matches("button")){
+        firstName = document.getElementById("firstName")
+        email = document.getElementById("email")
+        question = document.getElementById("question")
+        console.log("firstName: ", firstName.value)
+        console.log("email: ", email.value)
+        console.log("question: ", question.value)
+    }
+})
+</script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
