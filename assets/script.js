@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    
+
     $("#myModal").modal('show');
-    
+
     // ask user for permission to get location
     if (navigator.geolocation) { // device can return its location
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -71,9 +71,11 @@ $(document).ready(function () {
 
 
     $("[type ='button']").on("click", function () {
-        if ($(this).attr("id") === fortune) {
+        if ($(this).attr("id") === "fortune") {
+            console.log("fortune")
             fortuneCookie();
         } else activityType = $(this).attr("id");
+        console.log("activityType")
         activityPick(activityType);
     });
 
