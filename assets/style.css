@@ -68,3 +68,7 @@ body, .card, .jumbotron {
         display: none;
     }
 }
+
+.btnHolder {
+    text-align: center;
+}
