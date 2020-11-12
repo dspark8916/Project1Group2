@@ -42,8 +42,7 @@ $(document).ready(function () {
     };
 
     $("[type ='button']").on("click", function () {
-        activityType = $(this).attr("id");
-        activityPick(activityType);
+
     });
 
 
@@ -69,33 +68,40 @@ $(document).ready(function () {
     }
 
 
+    $("[type ='button']").on("click", function () {
+        if ($(this).attr("id") === fortune) {
+            fortuneCookie();
+        } else activityType = $(this).attr("id");
+        activityPick(activityType);
+    });
 
 
+    function fortuneCookie() {
+        $.ajax({
+            type: "GET",
+            url: "/api/fortune/cookie",
+            dataType: "json",
+        }).then(function (data) {
+            console.log(data)
+        });
+    }
+
+
+    $("[type ='button']").on("click", function () {
+        if ($(this).attr("id") === save) {
+            saveActivity();
+        }
+    });
+
+    function saveActivity() {
+
+
+    }
 
 
     // event that occurs when you click on CLICK HERE
     // event that occurs when you click on DIY/RECREATIONAL/SOCIAL/
     //          EDUCATIONAL/BUSYWORK/COOKING/RELAXATION/CHARITY/MUSIC
     //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
