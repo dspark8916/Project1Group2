@@ -43,9 +43,9 @@ $(document).ready(function () {
         });
     };
 
-    $("[type ='button']").on("click", function () {
+    // $("[type ='button']").on("click", function () {
 
-    });
+    // });
 
 
     // function to select activity user clicked on
@@ -72,10 +72,9 @@ $(document).ready(function () {
 
     $("[type ='button']").on("click", function () {
         if ($(this).attr("id") === "fortune") {
-            console.log("fortune")
             fortuneCookie();
         } else activityType = $(this).attr("id");
-        console.log("activityType")
+        // console.log("activityType")
         activityPick(activityType);
     });
 
@@ -83,24 +82,42 @@ $(document).ready(function () {
     function fortuneCookie() {
         $.ajax({
             type: "GET",
-            url: "/api/fortune/cookie",
+            url: "https://type.fit/api/quotes",
             dataType: "json",
         }).then(function (data) {
-            console.log(data)
+            var fortuneData = data;
+            var author;
+            var quote;
+            console.log(fortuneData);
+
+            randomNumber = Math.floor(Math.random() * fortuneData.length);
+            console.log("randomNumber: ", randomNumber);
+
+            author = fortuneData[randomNumber].author;
+            quote = fortuneData[randomNumber].text;
+            console.log(author, quote);
+
+            $(".modal-title").empty();
+            $(".modal-body").empty();
+
+            $(".modal-title").append(author);
+            $(".modal-body").append("\"" + quote.italics() + "\"");
+
+
         });
     }
 
 
-    $("[type ='button']").on("click", function () {
-        if ($(this).attr("id") === save) {
-            saveActivity();
-        }
-    });
+    // $("[type ='button']").on("click", function () {
+    //     if ($(this).attr("id") === save) {
+    //         saveActivity();
+    //     }
+    // });
 
-    function saveActivity() {
+    // function saveActivity() {
 
 
-    }
+    // }
 
 
     // event that occurs when you click on CLICK HERE
