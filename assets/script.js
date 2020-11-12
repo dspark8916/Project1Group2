@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    
+    $("#myModal").modal('show');
+    
     // ask user for permission to get location
     if (navigator.geolocation) { // device can return its location
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -11,7 +14,6 @@ $(document).ready(function () {
             searchWeather(lat, lon);
         });
     };
-
 
 
 
