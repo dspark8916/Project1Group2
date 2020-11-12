@@ -8,6 +8,7 @@
   <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/bulma">
   <link rel="stylesheet" href="assets/style.css">
   <title>Spice It Up!!</title>
@@ -53,7 +54,7 @@
 
   <div class="jumbotron jumbotron-fluid text-center">
     <div class="container">
-      <h1 class="display-4">Spice It Up !! </h1>
+      <h1 class="display-4">Spice It Up !!</h1>
       <p class="lead">Looking for something to do? Can't quite figure it out? Come and check out our app and we'll make
         it happen for you!! We'll give you ideas and suggestions on what you can do to spice up your day!!</p>
       <!-- <button type="button" class="btn btn-secondary" style="background-color: rgb(69, 176, 163);"><a
@@ -64,141 +65,160 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div id="myModal" class="modal fade">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header bg-dark">
-          <h5 class="modal-title text-white" id="staticBackdropLabel"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title">ARE YOU BORED???</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
         </div>
         <div class="modal-body bg-dark text-white">
-          ...
-        </div>
-        <div class="modal-footer bg-dark">
-          <button type="button" class="btn btn-danger" id="fortuneCookie">Spice It Up!</button>
-          <button type="button" class="btn btn-primary" id="save">Save</button>
-          <button type="button" class="btn btn-warning" data-dismiss="modal">Next</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card Deck Start -->
-  <div class="container-fluid">
-    <div class="row card-deck flex-row flex-nowrap mx-auto">
-      <div class="card border-primary bg-transparent text-primary text-center mx-auto" id="diy" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-pencil-ruler fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Do It Yourself</h5>
-        </div>
-      </div>
-      <div class="card border-secondary bg-transparent text-secondary text-center mx-auto" id="relaxation" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-umbrella-beach fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Relaxation</h5>
-        </div>
-      </div>
-      <div class="card border-success bg-transparent text-success text-center mx-auto" id="social" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-users fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Social</h5>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="row card-deck flex-row flex-nowrap mx-auto">
-      <div class="card border-danger bg-transparent text-danger text-center mx-auto" id="education" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-book-reader fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Educational</h5>
-        </div>
-      </div>
-      <div class="card border-warning bg-transparent text-warning text-center mx-auto" id="busywork" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-hourglass-half fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Busywork</h5>
-        </div>
-      </div>
-      <div class="card border-info bg-transparent text-info text-center mx-auto" id="cooking" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-hamburger fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Cooking</h5>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <div class="row card-deck flex-row flex-nowrap mx-auto">
-      <div class="card border-success bg-transparent text-success text-center mx-auto" id="recreational" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-running fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Recreational</h5>
-        </div>
-      </div>
-      <div class="card border-primary bg-transparent text-primary text-center mx-auto" id="charity" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-gift fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Charity</h5>
-        </div>
-      </div>
-      <div class="card border-dark bg-transparent text-dark text-center mx-auto" id="music" type="button"
-        data-toggle="modal" data-target="#staticBackdrop">
-        <i class="fas fa-headphones-alt fa-3x mx-auto"></i>
-        <div class="card-body">
-          <h5 class="card-title" id="actTit">Music</h5>
+          <p>Looking for something to do? Can't quite figure it out? Come and check out our app and we'll make it happen
+            for you!! We'll give you ideas and suggestions on what you can do to spice up your day!!</p>
+          <form class="btnHolder">
+            <button type="submit" class="btn btn-danger" data-dismiss="modal">Spice It Up!!</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Card Deck End -->
-
-  <!-- Footer -->
-  <footer class="page-footer font-small blue">
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="#"> Spice It Up! </a>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title text-white" id="staticBackdropLabel"></h5>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body bg-dark text-white">
+            ...
+          </div>
+          <div class="modal-footer bg-dark">
+            <button type="button" class="btn btn-danger">Spice It Up!</button>
+            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Next</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+
+    <!-- Card Deck Start -->
+    <div class="container-fluid">
+      <div class="row card-deck flex-row flex-nowrap mx-auto">
+        <div class="card border-primary bg-transparent text-primary text-center mx-auto" id="diy" type="button"
+          data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-pencil-ruler fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Do It Yourself</h5>
+          </div>
+        </div>
+        <div class="card border-secondary bg-transparent text-secondary text-center mx-auto" id="relaxation"
+          type="button" data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-umbrella-beach fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Relaxation</h5>
+          </div>
+        </div>
+        <div class="card border-success bg-transparent text-success text-center mx-auto" id="social" type="button"
+          data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-users fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Social</h5>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <div class="row card-deck flex-row flex-nowrap mx-auto">
+        <div class="card border-danger bg-transparent text-danger text-center mx-auto" id="education" type="button"
+          data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-book-reader fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Educational</h5>
+          </div>
+        </div>
+        <div class="card border-warning bg-transparent text-warning text-center mx-auto" id="busywork" type="button"
+          data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-hourglass-half fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Busywork</h5>
+          </div>
+        </div>
+        <div class="card border-info bg-transparent text-info text-center mx-auto" id="cooking" type="button"
+          data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-hamburger fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Cooking</h5>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row card-deck flex-row flex-nowrap mx-auto">
+        <div class="card border-success bg-transparent text-success text-center mx-auto" id="recreational" type="button"
+          data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-running fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Recreational</h5>
+          </div>
+        </div>
+        <div class="card border-primary bg-transparent text-primary text-center mx-auto" id="charity" type="button"
+          data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-gift fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Charity</h5>
+          </div>
+        </div>
+        <div class="card border-dark bg-transparent text-dark text-center mx-auto" id="music" type="button"
+          data-toggle="modal" data-target="#staticBackdrop">
+          <i class="fas fa-headphones-alt fa-3x mx-auto"></i>
+          <div class="card-body">
+            <h5 class="card-title" id="actTit">Music</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Deck End -->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="#"> Spice It Up! </a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
 
 
-  <!-- link js css bootstrap bulma -->
-  <!-- create nav bar with dropdown menu & logo-->
-  <!-- div section for intro about app -->
-  <!-- create jumbotron with logo buttons for user info input -->
-  <!-- create modal signup -->
-  <!-- takes user to application.html -->
-  <!-- tiles for activity categories -->
-  <!-- submit button to generate activity -->
-  <!-- pop up card with activity list and choices from tiles -->
-  <!-- user choose between save, do it, or next 
+    <!-- link js css bootstrap bulma -->
+    <!-- create nav bar with dropdown menu & logo-->
+    <!-- div section for intro about app -->
+    <!-- create jumbotron with logo buttons for user info input -->
+    <!-- create modal signup -->
+    <!-- takes user to application.html -->
+    <!-- tiles for activity categories -->
+    <!-- submit button to generate activity -->
+    <!-- pop up card with activity list and choices from tiles -->
+    <!-- user choose between save, do it, or next 
             save: saves for later
             do it: brings up local weather
             next: runs the activity list again-->
 
 
-  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="assets/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
