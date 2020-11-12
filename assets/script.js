@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    
+
     $("#myModal").modal('show');
-    
+
     // ask user for permission to get location
     if (navigator.geolocation) { // device can return its location
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -43,10 +43,9 @@ $(document).ready(function () {
         });
     };
 
-    $("[type ='button']").on("click", function () {
-        activityType = $(this).attr("id");
-        activityPick(activityType);
-    });
+    // $("[type ='button']").on("click", function () {
+
+    // });
 
 
     // function to select activity user clicked on
@@ -71,33 +70,59 @@ $(document).ready(function () {
     }
 
 
+    $("[type ='button']").on("click", function () {
+        if ($(this).attr("id") === "fortune") {
+            fortuneCookie();
+        } else activityType = $(this).attr("id");
+        // console.log("activityType")
+        activityPick(activityType);
+    });
 
 
+    function fortuneCookie() {
+        $.ajax({
+            type: "GET",
+            url: "https://type.fit/api/quotes",
+            dataType: "json",
+        }).then(function (data) {
+            var fortuneData = data;
+            var author;
+            var quote;
+            console.log(fortuneData);
+
+            randomNumber = Math.floor(Math.random() * fortuneData.length);
+            console.log("randomNumber: ", randomNumber);
+
+            author = fortuneData[randomNumber].author;
+            quote = fortuneData[randomNumber].text;
+            console.log(author, quote);
+
+            $(".modal-title").empty();
+            $(".modal-body").empty();
+
+            $(".modal-title").append(author);
+            $(".modal-body").append("\"" + quote.italics() + "\"");
+
+
+        });
+    }
+
+
+    // $("[type ='button']").on("click", function () {
+    //     if ($(this).attr("id") === save) {
+    //         saveActivity();
+    //     }
+    // });
+
+    // function saveActivity() {
+
+
+    // }
 
 
     // event that occurs when you click on CLICK HERE
     // event that occurs when you click on DIY/RECREATIONAL/SOCIAL/
     //          EDUCATIONAL/BUSYWORK/COOKING/RELAXATION/CHARITY/MUSIC
     //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
