@@ -79,6 +79,10 @@ body, .card, .jumbotron {
     text-align: right;
 }
 
+.btnFoot {
+    text-align: center;
+}
+
 .goodTime {
     color: white;
     background-color: tomato;
