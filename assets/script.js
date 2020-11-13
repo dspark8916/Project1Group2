@@ -24,15 +24,13 @@ $(document).ready(function () {
             url: "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=92f752c6db223987cf5c4bb3937d6b85&units=imperial",
             dataType: "json",
         }).then(function (data) {
-            console.log(data);
+            // console.log(data);
 
             $("#today").empty()
 
             // creating a card for appending weather data
             var title = $("<h4>").addClass("card-title, weatherCity").text(data.name);
             var card = $("<div>").addClass("card, weatherCard");
-            // var wind = $("<p>").addClass("card-text").text("Wind Speed: " + (data.wind.speed).toFixed(1) + " MPH");
-            // var humidity = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
             var main = $("<h6>").addClass("card-text, forecast").text(data.weather[0].main);
             var temp = $("<h5>").addClass("card-text, cityTemp").text((data.main.temp).toFixed(1) + " \u00B0F");
             var cardBody = $("<div>").addClass("card-body");
@@ -55,7 +53,7 @@ $(document).ready(function () {
             url: "http://www.boredapi.com/api/activity?type=" + activityType,
             dataType: "json",
         }).then(function (data) {
-            console.log(data);
+            // console.log(data);
 
             $(".modal-title").empty();
             $(".modal-body").empty();
@@ -71,11 +69,17 @@ $(document).ready(function () {
 
 
     $("[type ='button']").on("click", function () {
-        if ($(this).attr("id") === "fortune") {
+        console.log("buttonclicked");
+        if ($(this).attr("id") === "save") {
+            console.log("buttonclicksave");
+            saveActivity();
+        } else if ($(this).attr("id") === "fortune") {
+            console.log("buttonclickfortune");
             fortuneCookie();
-        } else activityType = $(this).attr("id");
-        // console.log("activityType")
-        activityPick(activityType);
+        } else if (activityType = $(this).attr("id")) {
+            console.log("activityType");
+            activityPick(activityType);
+        }
     });
 
 
@@ -88,36 +92,37 @@ $(document).ready(function () {
             var fortuneData = data;
             var author;
             var quote;
-            console.log(fortuneData);
+            // console.log(fortuneData);
 
             randomNumber = Math.floor(Math.random() * fortuneData.length);
-            console.log("randomNumber: ", randomNumber);
+            // console.log("randomNumber: ", randomNumber);
 
             author = fortuneData[randomNumber].author;
             quote = fortuneData[randomNumber].text;
-            console.log(author, quote);
+            // console.log(author, quote);
 
             $(".modal-title").empty();
             $(".modal-body").empty();
 
             $(".modal-title").append(author);
             $(".modal-body").append("\"" + quote.italics() + "\"");
-
-
         });
     }
 
 
     // $("[type ='button']").on("click", function () {
-    //     if ($(this).attr("id") === save) {
-    //         saveActivity();
-    //     }
+    //     // if ($(this).attr("id") === save) {
+    //     //     saveActivity();
+    //     // }
     // });
 
-    // function saveActivity() {
+    function saveActivity() {
+        title = $("#staticBackdropLabel").text();
+        body = $("#body-text").text();
+        console.log(title, body);
+        localStorage.setItem(title, body);
 
-
-    // }
+    }
 
 
     // event that occurs when you click on CLICK HERE
