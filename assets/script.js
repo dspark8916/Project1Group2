@@ -62,12 +62,33 @@ $(document).ready(function () {
             $("#next").show();
             $(".goodTime").hide();
 
+            if (activityType === "diy") {
+                outsideLink = "https://diyprojects.com/diy-craft-sites/#diyprojects"
+            } else if (activityType === "relaxation") {
+                outsideLink = "https://www.helpguide.org/articles/stress/relaxation-techniques-for-stress-relief.htm"
+            } else if (activityType === "social") {
+                outsideLink = "https://www.facebook.com/"
+            } else if (activityType === "education") {
+                outsideLink = "https://www.khanacademy.org/"
+            } else if (activityType === "busywork") {
+                outsideLink = "https://www.lifehack.org"
+            } else if (activityType === "cooking") {
+                outsideLink = "https://www.allrecipes.com/"
+            } else if (activityType === "recreational") {
+                outsideLink = "https://www.usa.gov/recreation"
+            } else if (activityType === "charity") {
+                outsideLink = "https://www.charitynavigator.org/"
+            } else if (activityType === "music") {
+                outsideLink = "https://www.spotify.com"
+            }
+
             type = $("<h5>").text(data.type);
             activity = $("<h3>").addClass("activity").text("Activity: " + data.activity);
             participants = $("<p>").addClass("participants").text("Participants: " + data.participants);
+            link = $("<a>").attr("href", outsideLink)
 
             $(".modal-title").append(type);
-            $(".modal-body").append(activity, participants);
+            $(".modal-body").append(activity, participants, link);
         });
     }
 
@@ -112,7 +133,7 @@ $(document).ready(function () {
             $("#next").hide();
 
             var haveFun = $("<button>").addClass("goodTime").text("Have Fun!!");
-            $(haveFun).attr("data-dismiss", "modal");   
+            $(haveFun).attr("data-dismiss", "modal");
 
             $(".modal-footer").append(haveFun);
             $(".modal-title").append(author);
