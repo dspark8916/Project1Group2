@@ -47,84 +47,42 @@
   </nav>
   <!-- nav end -->
 
-  <!-- old contact section -->
-  <!-- <section class="container-fluid" id="contentForm">
+  <!-- new contact form -->
+  <section class="container-fluid" id="contentForm">
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Me</h2>
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions or comments? Please do not hesitate to contact us directly.</p>
     <div class="row justify-content-lg-center">
         <div class="col-md-9 ">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form id="contact" name="contact">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
+                            <input type="text" id="firstName" name="firstName" >
                             <label for="name" class="name">Your name</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
+                            <input type="email" id="email" name="email" >
                             <label for="email" class="email">Your email</label>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="subject">Subject</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <textarea type="text" id="question" name="message" rows="2"></textarea>
                             <label for="message" class="message">Your message</label>
                         </div>
                     </div>
                 </div>
+                <div class="text-center text-md-center">
+                    <button id="sendContact" type="submit">
+                        Send contact
+                    </button>
+                </div>
             </form>
-            <div class="text-center text-md-center">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-            </div>
-            <div class="status"></div>
-        </div>
     </div>
-  </section> -->
-
-  <form id="contact">
-        <input type="text" placeholder="Enter your first name" id="firstName" />
-        <input type="email" placeholder="Enter your email" id="email" />
-        <!-- <input type="checkbox" id="newsletter" />Send me monthly newsletter -->
-    <br><br>
-        <span>What is your question?</span>
-    <br>
-        <textarea id="question" rows="4"></textarea>
-    <br><br>
-    <button id="sendContact" type="submit">
-        Send contact
-    </button>
-</form>
-
-<script>
-    var firstName;
-    var email;
-    var question;
-    var contactForm = document.getElementById("contact");
-
-    contactForm.addEventListener("click", function(event){
-        event.preventDefault();
-        if(event.target.matches("button")){
-            firstName = document.getElementById("firstName")
-            email = document.getElementById("email")
-            question = document.getElementById("question")
-            console.log("firstName: ", firstName.value)
-            console.log("email: ", email.value)
-            console.log("question: ", question.value)
-        }
-    })
-</script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
