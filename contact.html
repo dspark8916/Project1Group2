@@ -19,7 +19,6 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item ml-auto">
@@ -31,10 +30,6 @@
         <li class="nav-item ml-auto">
           <a class="nav-link" href="saved.html">Saved Activities</a>
         </li>
-        <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a> -->
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">saved</a>
           <a class="dropdown-item" href="#">applicaiton</a>
@@ -47,85 +42,60 @@
   </nav>
   <!-- nav end -->
 
-  <!-- old contact section -->
-  <!-- <section class="container-fluid" id="contentForm">
+  <!-- new contact form -->
+  <section class="container-fluid" id="contentForm">
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Me</h2>
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions or comments? Please do not hesitate to contact us directly.</p>
     <div class="row justify-content-lg-center">
         <div class="col-md-9 ">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form id="contact" name="contact">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="name">Your name</label>
+                            <input type="text" placeholder="Your name" id="firstName" name="firstName" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="email">Your email</label>
+                            <input type="email" placeholder="Your email" id="email" name="email" >
                         </div>
                     </div>
                 </div>
+                <br>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="subject">Subject</label>
+                    <div class="col">
+                        <div class="lg-form">
+                            <textarea type="text" placeholder="Your Message Here" id="question" name="message" rows="4" col="16"></textarea>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message" class="message">Your message</label>
-                        </div>
-                    </div>
+                <div class="text-center text-md-center">
+                    <button id="sendContact" type="submit">
+                        Send contact
+                    </button>
                 </div>
             </form>
-            <div class="text-center text-md-center">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-            </div>
-            <div class="status"></div>
-        </div>
-    </div>
-  </section> -->
+          </section>
 
-  <form id="contact">
-        <input type="text" placeholder="Enter your first name" id="firstName" />
-        <input type="email" placeholder="Enter your email" id="email" />
-        <!-- <input type="checkbox" id="newsletter" />Send me monthly newsletter -->
-    <br><br>
-        <span>What is your question?</span>
-    <br>
-        <textarea id="question" rows="4"></textarea>
-    <br><br>
-    <button id="sendContact" type="submit">
-        Send contact
-    </button>
-</form>
-
+    
 <script>
-    var firstName;
-    var email;
-    var question;
-    var contactForm = document.getElementById("contact");
+  var firstName;
+  var email;
+  var question;
+  var contactForm = document.getElementById("contact");
 
-    contactForm.addEventListener("click", function(event){
-        event.preventDefault();
-        if(event.target.matches("button")){
-            firstName = document.getElementById("firstName")
-            email = document.getElementById("email")
-            question = document.getElementById("question")
-            console.log("firstName: ", firstName.value)
-            console.log("email: ", email.value)
-            console.log("question: ", question.value)
-        }
-    })
+  contactForm.addEventListener("click", function(event){
+      event.preventDefault();
+      if(event.target.matches("button")){
+          firstName = document.getElementById("firstName")
+          email = document.getElementById("email")
+          question = document.getElementById("question")
+          console.log("firstName: ", firstName.value)
+          console.log("email: ", email.value)
+          console.log("question: ", question.value)
+      }
+  })
 </script>
-
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

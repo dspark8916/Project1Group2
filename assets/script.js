@@ -2,6 +2,12 @@ $(document).ready(function () {
 
     $("#myModal").modal('show');
 
+    $(function () {
+        $('.whatAmI').popover({
+          container: 'body'
+        })
+      })
+
     // ask user for permission to get location
     if (navigator.geolocation) { // device can return its location
         navigator.geolocation.getCurrentPosition(function (position) {
