@@ -76,7 +76,7 @@ body, .card, .jumbotron {
 }
 
 .btnHolder {
-    text-align: center;
+    text-align: right;
 }
 
 .goodTime {
@@ -86,3 +86,4 @@ body, .card, .jumbotron {
     border-radius: 8px;
     font-size: 18px;
 }
+
