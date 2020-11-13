@@ -57,9 +57,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr id="row">
-        <td id="type"></td>
-        <td id="activity"></td>
       </tr>
     </tbody>
   </table>
@@ -75,19 +72,20 @@
     for (i = 0; i < localStorage.length; i++) {
       key = localStorage.key(i);
       value = localStorage.getItem(key);
-      addActivity();
+      addActivity(i);
 
-      function addActivity() {
+      function addActivity(i) {
         newRow = $("<tr>").attr("id", "row");
         newType = $("<td>").attr("id", "type");
         newActivity = $("<td>").attr("id", "activity");
 
         newRow.append(newType, newActivity);
         $("tbody").append(newRow);
+
+        newType.append(key);
+        newActivity.append(value);
       }
 
-      $("#type").append(key);
-      $("#activity").append(value);
     };
   </script>
 </body>
