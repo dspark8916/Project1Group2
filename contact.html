@@ -94,36 +94,36 @@
   </section> -->
 
   <form id="contact">
-    <input type="text" placeholder="Enter your first name" id="firstName" />
-    <input type="email" placeholder="Enter your email" id="email" />
-    <!-- <input type="checkbox" id="newsletter" />Send me monthly newsletter -->
-<br><br>
-    <span>What is your question?</span>
-<br>
-    <textarea id="question" rows="4"></textarea>
-<br><br>
-<button id="sendContact" type="submit">
-    Send contact
-</button>
+        <input type="text" placeholder="Enter your first name" id="firstName" />
+        <input type="email" placeholder="Enter your email" id="email" />
+        <!-- <input type="checkbox" id="newsletter" />Send me monthly newsletter -->
+    <br><br>
+        <span>What is your question?</span>
+    <br>
+        <textarea id="question" rows="4"></textarea>
+    <br><br>
+    <button id="sendContact" type="submit">
+        Send contact
+    </button>
 </form>
 
 <script>
-var firstName;
-var email;
-var question;
-var contactForm = document.getElementById("contact");
+    var firstName;
+    var email;
+    var question;
+    var contactForm = document.getElementById("contact");
 
-contactForm.addEventListener("click", function(event){
-    event.preventDefault();
-    if(event.target.matches("button")){
-        firstName = document.getElementById("firstName")
-        email = document.getElementById("email")
-        question = document.getElementById("question")
-        console.log("firstName: ", firstName.value)
-        console.log("email: ", email.value)
-        console.log("question: ", question.value)
-    }
-})
+    contactForm.addEventListener("click", function(event){
+        event.preventDefault();
+        if(event.target.matches("button")){
+            firstName = document.getElementById("firstName")
+            email = document.getElementById("email")
+            question = document.getElementById("question")
+            console.log("firstName: ", firstName.value)
+            console.log("email: ", email.value)
+            console.log("question: ", question.value)
+        }
+    })
 </script>
 
   
