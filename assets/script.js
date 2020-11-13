@@ -21,7 +21,7 @@ $(document).ready(function () {
     function searchWeather(lat, lon) {
         $.ajax({
             type: "GET",
-            url: "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=92f752c6db223987cf5c4bb3937d6b85&units=imperial",
+            url: "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=92f752c6db223987cf5c4bb3937d6b85&units=imperial",
             dataType: "json",
         }).then(function (data) {
             // console.log(data);
@@ -50,7 +50,7 @@ $(document).ready(function () {
     function activityPick(activityType) {
         $.ajax({
             type: "GET",
-            url: "http://www.boredapi.com/api/activity?type=" + activityType,
+            url: "https://www.boredapi.com/api/activity?type=" + activityType,
             dataType: "json",
         }).then(function (data) {
             // console.log(data);
