@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-<link rel="stylesheet" href="assets/style.css">
-<title>Contact Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Contact Us</title>
 </head>
+
 <body>
- 
-    <!-- Nav bar -->
+
+  <!-- Nav bar -->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(69, 176, 163);">
-    <a class="navbar-brand" href="index.html"> <img src="assets/images/chili_logo.png" class="d-inline-block align-top" alt="logo"> </a>
+    <a class="navbar-brand" href="index.html"> <img src="assets/images/chili_logo.png" class="d-inline-block align-top"
+        alt="logo"> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -49,16 +52,14 @@
   <table class="table table-hover table-dark">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Activities</th>
+        <th scope="col">Type</th>
+        <th scope="col">Activity</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr id="row">
+        <td id="type"></td>
+        <td id="activity"></td>
       </tr>
     </tbody>
   </table>
@@ -66,10 +67,29 @@
 
 
 
-</section>
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    for (i = 0; i < localStorage.length; i++) {
+      key = localStorage.key(i);
+      value = localStorage.getItem(key);
+      addActivity();
+
+      function addActivity() {
+        newRow = $("<tr>").attr("id", "row");
+        newType = $("<td>").attr("id", "type");
+        newActivity = $("<td>").attr("id", "activity");
+
+        newRow.append(newType, newActivity);
+        $("tbody").append(newRow);
+      }
+
+      $("#type").append(key);
+      $("#activity").append(value);
+    };
+  </script>
 </body>
+
 </html>
