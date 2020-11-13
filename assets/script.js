@@ -57,6 +57,8 @@ $(document).ready(function () {
 
             $(".modal-title").empty();
             $(".modal-body").empty();
+            $("#fortune").show();
+            $("#save").show();
 
             type = $("<h5>").text(data.type);
             activity = $("<h3>").addClass("activity").text("Activity: " + data.activity);
