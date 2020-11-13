@@ -84,6 +84,25 @@
             </form>
     </div>
 
+    
+<script>
+  var firstName;
+  var email;
+  var question;
+  var contactForm = document.getElementById("contact");
+
+  contactForm.addEventListener("click", function(event){
+      event.preventDefault();
+      if(event.target.matches("button")){
+          firstName = document.getElementById("firstName")
+          email = document.getElementById("email")
+          question = document.getElementById("question")
+          console.log("firstName: ", firstName.value)
+          console.log("email: ", email.value)
+          console.log("question: ", question.value)
+      }
+  })
+</script>
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
