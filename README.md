@@ -39,8 +39,36 @@ Along with the main functions of the app we also have an About Me page, which wi
 Looking for something to do? Can't quite figure it out? Come and check out our app and we'll make it happen for you!! We'll give you ideas and suggestions on what you can do to spice up your day!!
 ```
 
-## Wireframe or sketch of the design
+## Tasks Completed
 
+**List of Tasks Completed**
+
+    1.
+
+    2.
+
+    3.
+
+    4.
+
+    5.
+    
+    6.
+    
+    7.
+    
+    8.
+    
+    9.
+
+    10.
+
+## Live Link & ScreenShots of Deployed Application
+
+**Live Link**
+[Spice It Up!](https://dspark8916.github.io/Project1Group2/)
+
+**ScreenShots**
 
 
 ## APIs to be used
