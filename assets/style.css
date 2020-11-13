@@ -69,6 +69,12 @@ body, .card, .jumbotron {
     }
 }
 
+@media only screen and (max-width: 420px) {
+    .card {
+        width: 250px;
+    }
+}
+
 .btnHolder {
     text-align: center;
 }
