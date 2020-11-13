@@ -4,9 +4,9 @@ $(document).ready(function () {
 
     $(function () {
         $('.whatAmI').popover({
-          container: 'body'
+            container: 'body'
         })
-      })
+    })
 
     // ask user for permission to get location
     if (navigator.geolocation) { // device can return its location
@@ -75,23 +75,23 @@ $(document).ready(function () {
             } else if (activityType === "social") {
                 outsideLink = "https://www.facebook.com/"
             } else if (activityType === "education") {
-                outsideLink = "https://www.khanacademy.org/"
+                outsideLink === "https://www.khanacademy.org/"
             } else if (activityType === "busywork") {
-                outsideLink = "https://www.lifehack.org"
+                outsideLink === "https://www.lifehack.org"
             } else if (activityType === "cooking") {
-                outsideLink = "https://www.allrecipes.com/"
+                outsideLink === "https://www.allrecipes.com/"
             } else if (activityType === "recreational") {
-                outsideLink = "https://www.usa.gov/recreation"
+                outsideLink === "https://www.usa.gov/recreation"
             } else if (activityType === "charity") {
-                outsideLink = "https://www.charitynavigator.org/"
+                outsideLink === "https://www.charitynavigator.org/"
             } else if (activityType === "music") {
-                outsideLink = "https://www.spotify.com"
+                outsideLink === "https://www.spotify.com"
             }
 
             type = $("<h5>").text(data.type);
             activity = $("<h3>").addClass("activity").text("Activity: " + data.activity);
             participants = $("<p>").addClass("participants").text("Participants: " + data.participants);
-            link = $("<a>").attr("href", outsideLink)
+            link = $("<a>").attr("href", outsideLink).text("Go Explore!")
 
             $(".modal-title").append(type);
             $(".modal-body").append(activity, participants, link);
