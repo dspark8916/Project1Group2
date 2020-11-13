@@ -1,6 +1,6 @@
 # Project1Group2
 
-# Project Title
+## Project Title
 
     Spice It Up!!! 
 
@@ -40,7 +40,7 @@ Bored API
 [Bored API](https://www.boredapi.com/)
 
 Quotes API
-[Quotes API](https://quotes.rest/)
+[Quotes API](https://type.fit/api/quotes)
 
 Weather API
 [Weather API](https://openweathermap.org/api)
