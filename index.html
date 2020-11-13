@@ -54,15 +54,10 @@
 
   <div class="jumbotron jumbotron-fluid text-center">
     <div class="container">
-      <h1 class="display-4 text-danger" style="font-size: 4vw; font-weight: bold; font-family: cursive;">Spice It Up!!</h1>
-      <h3 class="instruct text-danger" style="font-family: cursive; text-align: center; font-size: 40px;">Instructions:</h3>
-      <p class="howTo">
-        <ol type="1" class="howToList text-danger">
-          <li>Spice It Up!! - Run With Activity & Get A Quote</li>
-          <li>Save - Save Activity For Later</li>
-          <li>Next - Go Back & Generate New Activity</li>
-      </p>
-      <p class="lead"></p>
+      <h1 class="display-4 text-danger" style="font-weight: bold; font-family: cursive;">Spice It Up!!</h1>
+      <a class="navbar-brand" href="index.html"> <img src="assets/images/chili_logo.png"
+          class="d-inline-block align-top" alt="logo"> </a>
+      <!-- <p class="lead"></p> -->
       <!-- <button type="button" class="btn btn-secondary" style="background-color: rgb(69, 176, 163);"><a
           href="contact.html">CLICK HERE</a></button> -->
       <br>
@@ -76,11 +71,18 @@
       <div class="modal-content">
         <div class="modal-header bg-dark text-white">
           <h5 class="modal-title">ARE YOU BORED???</h5>
-          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
         </div>
         <div class="modal-body bg-dark text-white">
           <p>Welcome to Spice It Up where we'll do the thinking for you! Spice things up with all different types of
             activities so you'll never be bored again!!</p>
+          <button type="button" class="btn btn-md btn-danger whatAmI" data-toggle="popover"
+            title="What happens when you click me??" data-content="Accept activity & get an inspirational quote!!">Spice
+            It
+            Up!!</button>
+          <button type="button" class="btn btn-md btn-primary whatAmI" data-toggle="popover"
+            title="What happens when you click me??" data-content="Save activity for later!!">Save</button>
+          <button type="button" class="btn btn-md btn-warning whatAmI" data-toggle="popover"
+            title="What happens when you click me??" data-content="Go back & select a new activity!!">Next</button>
           <form class="btnHolder">
             <button type="submit" class="btn btn-danger" data-dismiss="modal">Spice It Up!!</button>
           </form>
