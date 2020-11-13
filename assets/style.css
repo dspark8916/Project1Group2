@@ -78,3 +78,12 @@ body, .card, .jumbotron {
 .btnHolder {
     text-align: center;
 }
+
+.goodTime {
+    color: white;
+    background-color: tomato;
+    box-sizing: large;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: tomato;
+}

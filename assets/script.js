@@ -60,6 +60,7 @@ $(document).ready(function () {
             $("#fortune").show();
             $("#save").show();
             $("#next").show();
+            $(".goodTime").hide();
 
             type = $("<h5>").text(data.type);
             activity = $("<h3>").addClass("activity").text("Activity: " + data.activity);
@@ -111,6 +112,7 @@ $(document).ready(function () {
             $("#next").hide();
 
             var haveFun = $("<button>").addClass("goodTime").text("Have Fun!!");
+            $(haveFun).attr("data-dismiss", "modal");   
 
             $(".modal-footer").append(haveFun);
             $(".modal-title").append(author);
