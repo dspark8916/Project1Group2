@@ -11,7 +11,7 @@ Welcome to Project 1! This is an important step in your full-stack journey as yo
 
 ## Project Title
 
-    Spice It Up!!! 
+**Spice It Up!!!** 
 
 ## Project Description
 
@@ -70,6 +70,15 @@ Looking for something to do? Can't quite figure it out? Come and check out our a
 
 **ScreenShots**
 
+![]()
+
+![]()
+
+![]()
+
+![]()
+
+![]()
 
 ## APIs to be used
 
@@ -81,3 +90,15 @@ Quotes API
 
 Weather API
 [Weather API](https://openweathermap.org/api)
+
+## Collaborators
+
+**List of Collaborators**
+
+    1. Andrew Crosby
+
+    2. Steven Galarza
+
+    3. Dimitar Micevski
+
+    4. Matthew Smith
