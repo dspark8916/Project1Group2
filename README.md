@@ -70,9 +70,9 @@ Looking for something to do? Can't quite figure it out? Come and check out our a
 
 **ScreenShots**
 
-![]()
+![Page On Load](assets/images/StartingPage.png)
 
-![]()
+![Main Page](assets/images/LivePage.png)
 
 ![]()
 
