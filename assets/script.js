@@ -87,14 +87,14 @@ $(document).ready(function () {
             } else if (activityType === "music") {
                 outsideLink === "https://www.spotify.com"
             }
-            
+
             type = $("<h5>").text(data.type);
             activity = $("<h3>").addClass("activity").text("Activity: " + data.activity);
-            participants = $("<p>").addClass("participants").text("Participants: " + data.participants);
+            // participants = $("<p>").addClass("participants").text("Participants: " + data.participants);
             link = $("<a>").attr("href", outsideLink).attr("target", "_blank").text("Go Explore!")
 
             $(".modal-title").append(type);
-            $(".modal-body").append(activity, participants, link);
+            $(".modal-body").append(activity, link);
         });
     }
 
