@@ -59,6 +59,7 @@ $(document).ready(function () {
             $(".modal-body").empty();
             $("#fortune").show();
             $("#save").show();
+            $("#next").show();
 
             type = $("<h5>").text(data.type);
             activity = $("<h3>").addClass("activity").text("Activity: " + data.activity);
@@ -107,7 +108,11 @@ $(document).ready(function () {
             $(".modal-body").empty();
             $("#fortune").hide();
             $("#save").hide();
+            $("#next").hide();
 
+            var haveFun = $("<button>").addClass("goodTime").text("Have Fun!!");
+
+            $(".modal-footer").append(haveFun);
             $(".modal-title").append(author);
             $(".modal-body").append("\"" + quote.italics() + "\"");
         });
