@@ -19,7 +19,6 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item ml-auto">
@@ -31,10 +30,6 @@
         <li class="nav-item ml-auto">
           <a class="nav-link" href="saved.html">Saved Activities</a>
         </li>
-        <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a> -->
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">saved</a>
           <a class="dropdown-item" href="#">applicaiton</a>
@@ -57,22 +52,20 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="firstName" name="firstName" >
-                            <label for="name" class="name">Your name</label>
+                            <input type="text" placeholder="Your name" id="firstName" name="firstName" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="email" id="email" name="email" >
-                            <label for="email" class="email">Your email</label>
+                            <input type="email" placeholder="Your email" id="email" name="email" >
                         </div>
                     </div>
                 </div>
+                <br>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <textarea type="text" id="question" name="message" rows="2"></textarea>
-                            <label for="message" class="message">Your message</label>
+                    <div class="col">
+                        <div class="lg-form">
+                            <textarea type="text" placeholder="Your Message Here" id="question" name="message" rows="4" col="16"></textarea>
                         </div>
                     </div>
                 </div>
@@ -82,7 +75,7 @@
                     </button>
                 </div>
             </form>
-    </div>
+          </section>
 
     
 <script>
