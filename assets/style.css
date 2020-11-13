@@ -83,6 +83,10 @@ body, .card, .jumbotron {
     text-align: center;
 }
 
+.modal-footer {
+    text-align: center;
+}
+
 .goodTime {
     color: white;
     background-color: tomato;
