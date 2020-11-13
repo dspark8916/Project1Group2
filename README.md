@@ -74,7 +74,7 @@ Looking for something to do? Can't quite figure it out? Come and check out our a
 
 ![Main Page](assets/images/LivePage.png)
 
-![]()
+![Mobile ScreenShot](assets/images/MobileScreenShot.png)
 
 ![]()
 
