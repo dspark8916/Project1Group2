@@ -95,3 +95,6 @@ body, .card, .jumbotron {
     font-size: 18px;
 }
 
+.breadcrumb {
+    margin-top: 325px;
+}
