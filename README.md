@@ -43,7 +43,7 @@ Looking for something to do? Can't quite figure it out? Come and check out our a
 
 **List of Tasks Completed**
 
-    1.
+    1. Created navbar containing app logo with 3 links, which turns into dropdown menu for mobile screens.
 
     2.
 
@@ -76,9 +76,11 @@ Looking for something to do? Can't quite figure it out? Come and check out our a
 
 ![Mobile ScreenShot](assets/images/MobileScreenShot.png)
 
-![]()
+![About Us ScreenShot](assets/images/AboutUsScreenShot.png)
 
-![]()
+![Contact Us ScreenShot](assets/images/ContactUsScreenShot.png)
+
+![Saved Activites ScreenShot](assets/images/SavedActivitiesScreenShot.png)
 
 ## APIs to be used
 
